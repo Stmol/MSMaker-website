@@ -1,0 +1,14 @@
+{
+    "name": "Stmol/msdesigner",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yury Stmol",
+            "email": "me@stmol.me"
+        }
+    ],
+    "require": {
+        "silex/silex": "1.*",
+        "twig/twig": ">=1.8,<2.0-dev"
+    }
+}

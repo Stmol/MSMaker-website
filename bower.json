@@ -1,0 +1,15 @@
+{
+  "name": "msodesigner",
+  "version": "1.0.0",
+  "authors": [
+    "Yury Stmol <me@stmol.me>"
+  ],
+  "main": "source.js",
+  "license": "MIT",
+  "homepage": "stmol.me",
+  "private": true,
+  "dependencies": {
+    "jquery": "1.10.2",
+    "modernizr": "2.6.2"
+  }
+}

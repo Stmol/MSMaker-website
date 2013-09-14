@@ -2,3 +2,4 @@ vendor/
 cache/
 web/assets/vendor/
 web/data/
+log/

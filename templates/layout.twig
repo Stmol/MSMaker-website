@@ -6,14 +6,20 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MSODesigner — MultiSell Online Editor — Lineager.net</title>
+    <title>MSMaker — Lineage 2 MultiSell Editor</title>
     <meta name="description" content="MultiSell Online Editor">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:700' rel='stylesheet' type='text/css'>
 
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    {% block stylesheets %}
     <link rel="stylesheet" href="assets/stylesheets/css/normalize.css">
     <link rel="stylesheet" href="assets/stylesheets/css/main.css">
+    <link rel="stylesheet" href="assets/vendor/960-grid-system/code/css/min/960_12_col.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/css/icons.css">
+    <link rel="stylesheet" href="assets/stylesheets/css/app.min.css">
+    {% endblock stylesheets %}
 
     <script src="assets/vendor/modernizr/modernizr.js"></script>
 </head>
@@ -22,21 +28,39 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- Add your site or application content here -->
-{% block body '' %}
+<div class="container_12">
+    {% block head %}
+        <div class="grid_3 prefix_1">
+            <h1 id="home"><a href="//msmaker.stmol.me">MSMaker</a></h1>
+        </div>
 
+        <div class="grid_7 suffix_1 top-nav">
+            <ul class="list-inline">
+                <li><a href="{{ path('documentation') }}">Documentation</a></li>
+                <li><a href="{{ path('changelog') }}">Changelog</a></li>
+                {#<li><a href="{{ path('contact') }}">Contact</a></li>#}
+            </ul>
+        </div>
+
+        <div class="grid_12"><div class="space_50"></div></div>
+    {% endblock %}
+
+    {% block body '' %}
+</div>
+
+{% block javascripts %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/vendor/jquery/jquery.min.js"><\/script>')</script>
 <script src="assets/javascript/plugin.js"></script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
         e=o.createElement(i);r=o.getElementsByTagName(i)[0];
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
+    ga('create','UA-18789585-8');ga('send','pageview');
 </script>
+{% endblock javascripts %}
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "name": "msodesigner",
+  "name": "msmaker.stmol.me",
   "version": "1.0.0",
   "authors": [
     "Yury Stmol <me@stmol.me>"
@@ -10,6 +10,8 @@
   "private": true,
   "dependencies": {
     "jquery": "1.10.2",
-    "modernizr": "2.6.2"
+    "modernizr": "2.6.2",
+    "bootstrap": "2.3.2",
+    "960-grid-system": "*"
   }
 }

@@ -1,5 +1,5 @@
 {
-    "name": "Stmol/msdesigner",
+    "name": "Stmol/msmaker.stmol.me",
     "license": "MIT",
     "authors": [
         {
@@ -9,6 +9,9 @@
     ],
     "require": {
         "silex/silex": "1.*",
-        "twig/twig": ">=1.8,<2.0-dev"
+        "twig/twig": ">=1.8,<2.0-dev",
+        "doctrine/dbal": "2.2.*",
+        "monolog/monolog": ">=1.0.0",
+        "symfony/twig-bridge": "~2.3"
     }
 }

@@ -37,7 +37,7 @@ $app->get(
         }
 
         if (false === @\file_get_contents($fileUrl)) {
-            $app['monolog']->addAlert(\sprintf('Download %s v %s from %s file %s', $target, $version, $ip, $fileUrl));
+            $app['monolog']->addAlert(\sprintf('Download %s %s from %s file %s', $target, $version, $ip, $fileUrl));
 
             return new Response('Error download', 500);
         }
@@ -54,7 +54,7 @@ $app->get(
         try {
             $app['db']->insert($app['db_conf']['table_log'], $logData);
         } catch (\Exception $e) {
-            $app['monolog']->addAlert(\sprintf('Download %s v %s from %s file %s', $target, $version, $ip, $fileUrl));
+            $app['monolog']->addAlert(\sprintf('Download %s %s from %s file %s', $target, $version, $ip, $fileUrl));
 
             return new Response('Error download', 500);
         }

@@ -1,0 +1,10 @@
+{
+    "debug": false,
+    "db": {
+        "driver": "pdo_mysql",
+        "host": "127.0.0.1",
+        "user": "stmolme",
+        "password": "yiB6QIWun5",
+        "dbname": "stmolme_msmaker"
+    }
+}

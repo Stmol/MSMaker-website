@@ -1,5 +1,6 @@
 vendor/
 cache/
+log/
 web/assets/vendor/
 web/data/
-log/
+web/.htaccess

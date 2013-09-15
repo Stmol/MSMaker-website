@@ -12,6 +12,8 @@
         "twig/twig": ">=1.8,<2.0-dev",
         "doctrine/dbal": "2.2.*",
         "monolog/monolog": ">=1.0.0",
-        "symfony/twig-bridge": "~2.3"
+        "symfony/twig-bridge": "~2.3",
+        "symfony/console": "2.3.*@dev",
+        "igorw/config-service-provider": "1.2.*@dev"
     }
 }

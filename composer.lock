@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "b599b8018af73e0c7d4a0c300c8b1011",
+    "hash": "b290f4213bafa3e10728296ac10d1712",
     "packages": [
         {
             "name": "doctrine/common",
@@ -126,6 +126,63 @@
                 "queryobject"
             ],
             "time": "2012-04-13 07:56:12"
+        },
+        {
+            "name": "igorw/config-service-provider",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/igorw/ConfigServiceProvider.git",
+                "reference": "8e8f60b3ec86d63733db3bd6371117a758027ec6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/igorw/ConfigServiceProvider/zipball/8e8f60b3ec86d63733db3bd6371117a758027ec6",
+                "reference": "8e8f60b3ec86d63733db3bd6371117a758027ec6",
+                "shasum": ""
+            },
+            "require": {
+                "silex/silex": "~1.0"
+            },
+            "require-dev": {
+                "jamesmoss/toml": "~0.1",
+                "symfony/yaml": "~2.1"
+            },
+            "suggest": {
+                "jamesmoss/toml": "~0.1",
+                "symfony/yaml": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Igorw\\Silex": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch",
+                    "homepage": "http://wiedler.ch/igor/"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/igorw/ConfigServiceProvider/contributors"
+                }
+            ],
+            "description": "A config ServiceProvider for Silex with support for php, json and yaml.",
+            "keywords": [
+                "silex"
+            ],
+            "time": "2013-05-31 14:23:34"
         },
         {
             "name": "monolog/monolog",
@@ -355,6 +412,59 @@
                 "microframework"
             ],
             "time": "2013-07-04 07:15:36"
+        },
+        {
+            "name": "symfony/console",
+            "version": "2.3.x-dev",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console.git",
+                "reference": "7a8f90ca3101cbb71abb55a7f42c5ef9476c339a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/7a8f90ca3101cbb71abb55a7f42c5ef9476c339a",
+                "reference": "7a8f90ca3101cbb71abb55a7f42c5ef9476c339a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/event-dispatcher": "~2.1"
+            },
+            "suggest": {
+                "symfony/event-dispatcher": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-09-13 12:20:37"
         },
         {
             "name": "symfony/debug",
@@ -768,9 +878,10 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "symfony/console": 20,
+        "igorw/config-service-provider": 20
+    },
     "platform": [
 
     ],

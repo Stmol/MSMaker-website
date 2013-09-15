@@ -1,7 +1,5 @@
 <?php
 
-/** Home */
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -10,7 +8,25 @@ $app->get(
     function () use ($app) {
         return $app['twig']->render('index.twig', array());
     }
-)->bind('home');
+)
+    ->bind('home');
+
+/** Version */
+$app->get(
+    '/version',
+    function () {
+
+        $dropboxFileUrl = 'https://dl.dropboxusercontent.com/s/5urbqyxwe0cxqzc/version';
+
+        $versionContent = @file_get_contents($dropboxFileUrl);
+
+        if (!$versionContent) {
+            return new Response('0', 500);
+        }
+
+        return new Response(md5($versionContent));
+    }
+);
 
 /** Download */
 $app->get(

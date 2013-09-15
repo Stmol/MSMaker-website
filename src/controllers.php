@@ -17,6 +17,10 @@ $app->get(
     '/download/{target}/{version}',
     function (Request $request, $target, $version) use ($app) {
 
+        $ip = $request->getClientIp();
+        $ua = $request->server->get('HTTP_USER_AGENT');
+        $ref = $request->server->get('HTTP_REFERER');
+
         switch ($target) {
             case 'msmaker':
                 $fileName = 'msmaker.zip';
@@ -33,12 +37,10 @@ $app->get(
         }
 
         if (false === @\file_get_contents($fileUrl)) {
+            $app['monolog']->addAlert(\sprintf('Download %s v %s from %s file %s', $target, $version, $ip, $fileUrl));
+
             return new Response('Error download', 500);
         }
-
-        $ip = $request->getClientIp();
-        $ua = $request->server->get('HTTP_USER_AGENT');
-        $ref = $request->server->get('HTTP_REFERER');
 
         $logData = array(
             'dl_time' => date('Y-m-d H:i:s'),
@@ -52,7 +54,7 @@ $app->get(
         try {
             $app['db']->insert($app['db_conf']['table_log'], $logData);
         } catch (\Exception $e) {
-            $app['monolog']->addAlert(\sprintf('Download %s from %s', $version, $ip));
+            $app['monolog']->addAlert(\sprintf('Download %s v %s from %s file %s', $target, $version, $ip, $fileUrl));
 
             return new Response('Error download', 500);
         }

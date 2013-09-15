@@ -39,13 +39,13 @@ $app->get(
 
         switch ($target) {
             case 'msmaker':
-                $fileName = 'msmaker.zip';
-                $fileUrl = 'https://dl.dropboxusercontent.com/s/xxciqenc06hsvwm/' . $fileName;
+                $fileName = 'msmaker.latest.zip';
+                $fileUrl = 'https://dl.dropboxusercontent.com/s/cy2uyg74c3w07pe/10.zip';
                 break;
 
             case 'datapack':
-                $fileName = 'datapack.zip';
-                $fileUrl = 'https://dl.dropboxusercontent.com/s/xxciqenc06hsvwm/' . $fileName;
+                $fileName = 'datapack.latest.zip';
+                $fileUrl = 'https://dl.dropboxusercontent.com/s/k8uiq2mk6yzc0rj/10.zip';
                 break;
 
             default:

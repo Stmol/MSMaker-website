@@ -43,11 +43,11 @@ $app->register(
     new DoctrineServiceProvider(),
     array(
         'db.options' => array(
-            'driver'   => $app['db']['driver'],
-            'host'     => $app['db']['host'],
-            'user'     => $app['db']['user'],
-            'password' => $app['db']['password'],
-            'dbname'   => $app['db']['dbname'],
+            'driver'   => $app['db_conf']['driver'],
+            'host'     => $app['db_conf']['host'],
+            'user'     => $app['db_conf']['user'],
+            'password' => $app['db_conf']['password'],
+            'dbname'   => $app['db_conf']['dbname'],
         ),
     )
 );

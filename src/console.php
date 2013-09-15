@@ -23,7 +23,7 @@ $console
 
             $schema = new Schema();
 
-            $downloadLogTable = $schema->createTable($app['db']['dbname']);
+            $downloadLogTable = $schema->createTable($app['db_conf']['dbname']);
 
             $downloadLogTable->addColumn('id', 'integer', array('unsigned' => true, 'autoincrement' => true));
             $downloadLogTable->addColumn(

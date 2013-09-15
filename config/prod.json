@@ -5,6 +5,7 @@
         "host": "127.0.0.1",
         "user": "stmolme",
         "password": "yiB6QIWun5",
-        "dbname": "stmolme_msmaker"
+        "dbname": "stmolme_msmaker",
+        "table_log": "download_log"
     }
 }

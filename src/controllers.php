@@ -1,6 +1,7 @@
 <?php
 
 /** Home */
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -49,7 +50,7 @@ $app->get(
         );
 
         try {
-            $app['db']->insert('download_log', $logData);
+            $app['db']->insert($app['table_log'], $logData);
         } catch (\Exception $e) {
             $app['monolog']->addAlert(\sprintf('Download %s from %s', $version, $ip));
 

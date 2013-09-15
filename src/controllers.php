@@ -50,7 +50,7 @@ $app->get(
         );
 
         try {
-            $app['db']->insert($app['table_log'], $logData);
+            $app['db']->insert($app['db_conf']['table_log'], $logData);
         } catch (\Exception $e) {
             $app['monolog']->addAlert(\sprintf('Download %s from %s', $version, $ip));
 

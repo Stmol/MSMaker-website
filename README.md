@@ -1,4 +1,4 @@
 Link
 ===============
 
-(msmaker.stmol.me)[http://msmaker.stmol.me]
+[msmaker.stmol.me](http://msmaker.stmol.me)
